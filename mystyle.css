@@ -1,0 +1,12 @@
+.font1{
+    font-family:"Arial";
+    font-size:18px;
+} 
+.font2{
+    font-family:"Arial";
+    font-size:16px;
+} 
+.image1 {
+background-image:url('IMG_1070.jpg');
+background-size: 100% 100%;
+}
