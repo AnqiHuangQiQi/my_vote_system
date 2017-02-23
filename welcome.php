@@ -12,7 +12,7 @@ if(isset($_POST['submit0'])){
 
     $_SESSION['password']=2;
 
-   echo "<script language=javascript>alert('Login Successfully!');window.location='welcome.php'</script>";
+   echo "<script language=javascript>alert('Login Successfully!');window.location='manager.php'</script>";
       
   }else{
     echo "<script language=javascript>alert('Cannot Login, please check your username and password');window.location='welcome.php'</script>";
