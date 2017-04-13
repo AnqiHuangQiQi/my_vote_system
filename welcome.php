@@ -7,14 +7,20 @@
     </head>
     <body>
        <?php
+      
 if(isset($_POST['submit0'])){
   if($_POST['password']=='huang' && $_POST['username']='anqi'){
 
-    $_SESSION['password']=2;
+    $_SESSION['password']=$_POST['password'];
+    $_SESSION['username']=$_POST['username'];
 
    echo "<script language=javascript>alert('Login Successfully!');window.location='manager.php'</script>";
       
-  }else{
+  }
+    else if($_POST['password']=='anqi' && $_POST['username']='huang'){
+        echo "<script language=javascript>alert('Login Successfully!');window.location='customer.php'</script>";
+    }
+  else{
     echo "<script language=javascript>alert('Cannot Login, please check your username and password');window.location='welcome.php'</script>";
   }
 }

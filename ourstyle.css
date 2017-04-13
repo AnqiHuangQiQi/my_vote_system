@@ -6,3 +6,15 @@ background-image:url('managerbg.jpg');
     font-family:"Arial";
     font-size:18px;
 } 
+tr td.bord1{
+    border-style:solid dotted solid dotted; 
+    border-width: 3px 0px 3px 0px;
+}
+tr td.bord2{
+    border-style:none none none none; 
+    border-width: 3px 0px 3px 0px;
+}
+tr td.bord3{
+    border-style:solid dotted solid dotted; 
+    border-width: 0px 0px 3px 0px;
+}

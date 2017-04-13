@@ -1,0 +1,14 @@
+.image3 {
+background-image:url('yinghua.jpg');
+background-size: 100% 100%;  
+}
+.fonte{
+    font-family:"Arial";
+    font-size:18px;
+} 
+tr td.border{
+    border-style:solid dotted solid dotted; 
+    border-width: 3px 0px 3px 0px;
+    font-size:22px;
+    text-shadow: white 0 2px 0;
+}
