@@ -1,3 +1,14 @@
+<?php
+session_start();
+?>
+<?php 
+        if(empty($_SESSION['username'])){ 
+            header("Location: welcome.php?errNum=3"); 
+  exit(); 
+ } 
+        echo $_SESSION['username'];
+ echo "你是管理员，你现在拥有后台管理权限"; 
+ ?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -6,18 +17,6 @@
         <title>Voting</title>
     </head>
     <body>
-        
-        <?php
-        ob_start();
-       session_start();
- if(empty($_SESSION['username'])){ 
-     
-  header("Location: welcome.php?errNum=3"); 
-  exit(); 
- } 
-        echo $_SESSION['username'];
- echo "你是管理员，你现在拥有后台管理权限"; 
- ?>
 <?php
       
 $co=new mysqli("localhost","root","24133571ccA");
