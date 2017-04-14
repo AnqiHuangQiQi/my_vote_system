@@ -8,7 +8,17 @@
     <body>
        <?php
       
-if(isset($_POST['submit0'])){
+        if(!empty($_GET['errNum'])){ 
+  if($_GET['errNum']==1){ 
+   echo "<script language=javascript>alert('Wrong username and password!');window.location='welcome.php'</script>";
+  }else if($_GET['errNum']==2){ 
+   echo "Please insert your username and password!"; 
+  }else if($_GET['errNum']==3){ 
+   echo "Illegal Access"; 
+  } 
+ }
+        
+/*if(isset($_POST['submit0'])){
   if($_POST['password']=='huang' && $_POST['username']='anqi'){
 
     $_SESSION['password']=$_POST['password'];
@@ -23,10 +33,10 @@ if(isset($_POST['submit0'])){
   else{
     echo "<script language=javascript>alert('Cannot Login, please check your username and password');window.location='welcome.php'</script>";
   }
-}
+}*/
 ?> 
       
-    <form action="" method="post">
+    <form action="process.php" method="post">
        
      <table border="0" height="680" width=100% class="image1" style="border-radius:10px;" cellpadding="0">
 <tbody>       
