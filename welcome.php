@@ -12,9 +12,9 @@
   if($_GET['errNum']==1){ 
    echo "<script language=javascript>alert('Wrong username and password!');window.location='welcome.php'</script>";
   }else if($_GET['errNum']==2){ 
-   echo "Please insert your username and password!"; 
+   echo "<script language=javascript>alert('Please insert username and password to login!');window.location='welcome.php'</script>";
   }else if($_GET['errNum']==3){ 
-   echo "Illegal Access"; 
+   echo "<script language=javascript>alert('Please insert username and password to login!');window.location='welcome.php'</script>";
   } 
  }
         

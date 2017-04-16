@@ -1,3 +1,12 @@
+<?php
+session_start();
+?>
+<?php 
+if(empty($_SESSION['username'])){ 
+  header("Location: welcome.php?errNum=3"); 
+  exit(); 
+ } 
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -53,7 +62,7 @@ if($co->connect_error){
                 $id = $_POST["item"];
                 $sqll = "UPDATE `ku`.`options` SET `number`=`number`+1 WHERE `id`='$id';";
                 mysqli_query($co,$sqll);
-                //session_destroy();
+                session_destroy();
                 ?>
                
                 <script language="javascript">

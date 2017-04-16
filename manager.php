@@ -3,11 +3,11 @@ session_start();
 ?>
 <?php 
         if(empty($_SESSION['username'])){ 
-            header("Location: welcome.php?errNum=3"); 
+     header("Location: welcome.php?errNum=3"); 
   exit(); 
  } 
-        echo $_SESSION['username'];
- echo "你是管理员，你现在拥有后台管理权限"; 
+    
+
  ?>
 <!DOCTYPE HTML>
 <html>
@@ -27,6 +27,7 @@ if($co->connect_error){
 
 $SQL="select * from ku.title;";
 $rs=mysqli_query($co,$SQL);
+    
 $rows=mysqli_fetch_assoc($rs);
 
 //echo $rows["title"];
@@ -102,7 +103,7 @@ if($co->connect_error){
          style="border-radius:10px;border-color:#644288;" class="fonte" cellpadding="0">
          <tbody align="center">  
              <tr>
-                 <td colspan="5" align="center" height="30" border="0" class="bord3"> Administrator </td>
+                 <td colspan="5" align="center" height="30" border="0" class="bord3"> Administrator: <?php echo $_SESSION['username']?></td>
                  
              </tr>
         <tr>

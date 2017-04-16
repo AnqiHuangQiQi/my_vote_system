@@ -4,10 +4,19 @@ ob_start();
   if($_POST['username']=="anqi" && $_POST['password']=="huang"){ 
       session_start();//开启session 
    echo "Login Successfully!"; 
-   $_SESSION['username'] = $_POST['username'];//将登录名保存到session中 
+   $_SESSION['username'] = $_POST['username']; 
    header("Location: manager.php"); 
+     
    exit(); 
-  }else{ 
+  }else if($_POST['username']=="huang" && $_POST['password']=="anqi"){
+      session_start();//开启session 
+   echo "Login Successfully!"; 
+   $_SESSION['username'] = $_POST['username'];
+   header("Location: customer.php");
+
+      exit();
+  }
+   else{ 
    header("Location: welcome.php?errNum=1"); 
    exit(); 
   } 
