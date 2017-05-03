@@ -69,26 +69,35 @@ if($co->connect_error){
         ?>
         <?php
         $type="";
-        if(isset($_GET["type"])){
-            $type=$_GET["type"];
-        }
-        if($type == "delete"){
-            $ID = $_GET["id"];
-            $SQL = "DELETE FROM `ku`.`options` WHERE `id`='$ID';";
+        if(isset($_POST["SubmitNew"])){
+            $type="add";
+            $newitem = $_POST["newitem"];
+            $SQL = "INSERT INTO `ku`.`options` (`class`, `option`, `number`) VALUES (1, '$newitem', 0);";
             mysqli_query($co,$SQL);
-            echo "<script language=javascript>alert('Delete Successfully!'); window.locatoin='manager.php'</script>";       
+            echo "<script language=javascript> alert('Add New Option Successfully!'); window.location='manager.php' </script>";
         }
         
         ?>
         <?php
-        
-        if(isset($_POST["SubmitNew"])){
-            $newitem = $_POST["newitem"];
-            $SQL = "INSERT INTO `ku`.`options` (`class`, `option`, `number`) VALUES (1, '$newitem', 0);";
-            mysqli_query($co,$SQL);
+        $type="";
+        if(isset($_GET["type"])){
+            $type=$_GET["type"];
+            unset($_GET["type"]);
         }
         
+        if($type == "delete"){
+            $ID = $_GET["id"];
+            $SQL = "DELETE FROM `ku`.`options` WHERE `id`='$ID';";
+            mysqli_query($co,$SQL);
+            unset($_GET["type"]);
+            echo "<script language=javascript>alert('Delete Successfully!'); window.locatoin='manager.php'</script>";   
+            
+        }
+        
+        $type="";
+        
         ?>
+        
         
         <form action="" method="post">
        
