@@ -7,6 +7,10 @@ Administrator:
   Password : huang    
 Customer:     
   Username : huang     
-  Password : anqi      
+  Password : anqi    
+
+![image](https://github.com/AntheaHuang/my_vote_system/blob/master/welcome.png)
+![image](https://github.com/AntheaHuang/my_vote_system/blob/master/administrator.png)
+![image](https://github.com/AntheaHuang/my_vote_system/blob/master/customer.png)
  
   
